@@ -1,6 +1,7 @@
 import { Table, TableCell, TableRow, TableHead, Theme, TableBody, Link } from "@material-ui/core";
 import { ClassNameMap, createStyles, makeStyles } from "@material-ui/styles";
 import React, { FC } from "react";
+import Title from "./Title";
 
 
 // Generate Order Data
@@ -31,9 +32,9 @@ const Order: FC<any>  = () => {
   const classes:  ClassNameMap<"seeMore"> = useStyles();
   return (
     <React.Fragment>
-      <div>
+      <Title>
         Recent Order
-      </div>
+      </Title>
       <Table>
         <TableHead>
           <TableRow>

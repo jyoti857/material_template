@@ -1,6 +1,7 @@
 import { Link, makeStyles, Typography } from "@material-ui/core";
 import { ClassNameMap } from "@material-ui/styles";
 import React, { FC } from "react";
+import Title from "./Title";
 
 const useStyles = makeStyles({
   depositContext: {
@@ -12,7 +13,7 @@ const Deposits: FC<any> = () => {
   const classes: ClassNameMap<"depositContext">  = useStyles();
   return(
     <React.Fragment>
-      <div>Recent Deosits</div>
+      <Title>Recent Deosits</Title>
       <Typography component ='p' variant = 'h4'>
         $3,024.00
       </Typography>

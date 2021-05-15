@@ -2,6 +2,7 @@
 import { useTheme } from '@material-ui/core/styles'
 import React from 'react';
 import {LineChart, XAxis, ResponsiveContainer, YAxis, Label, Line} from 'recharts'
+import Title from './Title';
 function createData(time, amount) {
   return { time, amount };
 }
@@ -21,7 +22,7 @@ const Chart = (props: ChartProps) => {
   const theme = useTheme();
   return (
     <React.Fragment>
-      <div>Today</div>
+      <Title>Today</Title>
       <ResponsiveContainer>
         <LineChart
           data = {data}
