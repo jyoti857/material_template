@@ -7,6 +7,7 @@ import clsx from 'clsx'
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import Chart from "./Chart";
+import Deposits from "./Deposits";
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme?: Theme) => 
@@ -160,9 +161,9 @@ const Dashboard: FC<any> = () =>{
                 <Chart />
               </Paper>
             </Grid>
-          <Grid>
-            <Paper>
-
+          <Grid item xs = {12} md = {8} lg = {9}>
+            <Paper className = {fixedHeightPaper}>
+              <Deposits />
             </Paper>
           </Grid>
           <Grid>
