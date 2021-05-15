@@ -1,5 +1,5 @@
 import {FC, useState} from "react"
-import { Badge, Box, Container, createStyles, CssBaseline, Divider, Drawer, Grid, IconButton, List, Paper, Theme, Toolbar, Typography } from '@material-ui/core';
+import { Badge, Box, Container, createStyles, CssBaseline, Divider, Drawer, Grid, IconButton, Link, List, Paper, Theme, Toolbar, Typography } from '@material-ui/core';
 import AppBar  from '@material-ui/core/AppBar';
 import { ClassNameMap, makeStyles } from "@material-ui/styles";
 import MenuIcon from '@material-ui/icons/Menu'
@@ -92,6 +92,18 @@ const useStyles = makeStyles((theme?: Theme) =>
   })
 );
 
+function copyright(){
+  return(
+    <Typography variant='body2' color='textSecondary' align='center'>
+      <Link color='inherit' href='google.com'>
+        google
+      </Link> {' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  )
+}
+
 const Dashboard: FC<any> = () =>{
   const [open, setOpen] = useState(true);
   const classes: ClassNameMap<"toolbar" | "root" | "toolbarIcon"
@@ -173,7 +185,9 @@ const Dashboard: FC<any> = () =>{
             </Paper>
           </Grid>
         </Grid>
-          <Box pt={4}></Box>
+          <Box pt={4}>
+            {copyright()}
+          </Box>
         </Container>
       </main>
     </div>
