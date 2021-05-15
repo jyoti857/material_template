@@ -10,6 +10,7 @@ import DarkMode from '@material-ui/icons/Brightness4'
 import Chart from "./Chart";
 import Deposits from "./Deposits";
 import Order from "./Order";
+import {MainListItems, secondaryListItems} from './ListItems'
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme?: Theme) => 
@@ -166,10 +167,10 @@ const Dashboard: FC<any> = ({toggleTheme}: DashboardProps) =>{
         </div>
         <Divider /> 
         <List>
-
+          {MainListItems}
         </List>
         <Divider />
-        <List></List>
+        <List>{secondaryListItems}</List>
       </Drawer>
       <main className ={classes.content}>
         <div className = {classes.appBarSpacer}/>
