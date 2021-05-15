@@ -6,6 +6,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import clsx from 'clsx'
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import Chart from "./Chart";
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme?: Theme) => 
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme?: Theme) =>
       alignItems: 'center',
       justifyContent: 'flex-end',
       padding: '0 8px',
+      ...theme.mixins.toolbar,
     },
     appBar: {
       zIndex: theme.zIndex.drawer + 1,
@@ -39,7 +41,6 @@ const useStyles = makeStyles((theme?: Theme) =>
     },
     menuButton: {
       marginRight: 36, 
-      zIndex: theme.zIndex.drawer + 2,
     },
     menuButtonHidden: {
       display: 'none'
@@ -134,7 +135,7 @@ const Dashboard: FC<any> = () =>{
           paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose)
         }}
       >
-        <div>
+        <div className = {classes.toolbarIcon}>
           <IconButton onClick = {handleDrawerClose}>
             <ChevronLeftIcon />  
           </IconButton>  
@@ -154,10 +155,11 @@ const Dashboard: FC<any> = () =>{
           <Grid
             container spacing={3}
           >
-            <Paper className = {fixedHeightPaper}>
-              
-            </Paper>
-          </Grid>
+           <Grid item xs={12} md={8} lg={9}>
+              <Paper className={fixedHeightPaper}>
+                <Chart />
+              </Paper>
+            </Grid>
           <Grid>
             <Paper>
 
@@ -168,6 +170,7 @@ const Dashboard: FC<any> = () =>{
 
             </Paper>
           </Grid>
+        </Grid>
           <Box pt={4}></Box>
         </Container>
       </main>
