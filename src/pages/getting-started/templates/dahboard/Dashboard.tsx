@@ -5,7 +5,8 @@ import { ClassNameMap, makeStyles } from "@material-ui/styles";
 import MenuIcon from '@material-ui/icons/Menu'
 import clsx from 'clsx'
 import NotificationsIcon from '@material-ui/icons/Notifications'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import DarkMode from '@material-ui/icons/Brightness4'
 import Chart from "./Chart";
 import Deposits from "./Deposits";
 import Order from "./Order";
@@ -104,7 +105,11 @@ function copyright(){
   )
 }
 
-const Dashboard: FC<any> = () =>{
+interface DashboardProps{
+  toggleTheme: () => boolean
+}
+
+const Dashboard: FC<any> = ({toggleTheme}: DashboardProps) =>{
   const [open, setOpen] = useState(true);
   const classes: ClassNameMap<"toolbar" | "root" | "toolbarIcon"
   | 'appBar' | 'appBarShift' | "menuButton" | "menuButtonHidden" | 'title' |
@@ -118,8 +123,10 @@ const Dashboard: FC<any> = () =>{
   return (
     <div className = {classes.root}>
       <CssBaseline />
-
-      <AppBar position = 'absolute' className = {clsx(classes.appBar, open && classes.appBarShift)}>
+      <AppBar 
+        position = 'absolute'
+        className = {clsx(classes.appBar, open && classes.appBarShift)}>
+          
         <Toolbar className = {classes.toolbar}>
           <IconButton 
             edge = 'start'
@@ -140,6 +147,9 @@ const Dashboard: FC<any> = () =>{
             <NotificationsIcon />  
           </Badge> 
         </IconButton>
+        <IconButton onClick = {() => toggleTheme()}>
+            <DarkMode />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer 
