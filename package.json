@@ -3,9 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/data-grid": "^4.0.0-alpha.28",
+    "@material-ui/docs": "^4.0.0-beta.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@material-ui/pickers": "^3.3.10",
+    "@material-ui/styles": "^4.11.4",
+    "@material-ui/system": "^4.11.3",
+    "@material-ui/types": "^5.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "clsx": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -15,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "typescript": "tsc -p tsconfig.json"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +45,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.3.0",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
+    "typescript": "^4.2.4"
   }
 }

@@ -1,0 +1,31 @@
+{
+  "include": [
+    "types",
+    "src/pages/**/*"
+  ],
+  "compilerOptions": {
+    "allowJs": false,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "types": [
+      "react"
+    ],
+    "jsx": "react-jsx",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node"
+  }
+}
