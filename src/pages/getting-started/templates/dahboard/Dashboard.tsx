@@ -8,6 +8,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import Chart from "./Chart";
 import Deposits from "./Deposits";
+import Order from "./Order";
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme?: Theme) => 
@@ -166,9 +167,9 @@ const Dashboard: FC<any> = () =>{
               <Deposits />
             </Paper>
           </Grid>
-          <Grid>
-            <Paper>
-
+          <Grid item xs={12} md={8} lg={9}>
+            <Paper className={fixedHeightPaper}>
+              <Order />
             </Paper>
           </Grid>
         </Grid>
