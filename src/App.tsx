@@ -6,6 +6,7 @@ import Dashboard from './pages/getting-started/templates/dahboard/Dashboard'
 import Pricing from './pages/getting-started/templates/pricing/Pricing'
 import Checkout from './pages/getting-started/templates/checkout/Checkout'
 import Signin from './pages/getting-started/templates/signin/Signin'
+import StickyFooter from './pages/getting-started/templates/sticky-footer/StickyFooter'
 
 
 const  App: FC<any> = (props) => {
@@ -16,7 +17,8 @@ const  App: FC<any> = (props) => {
       {/* <Dashboard toggleTheme = {toggleTheme}/> */}
       {/* <Pricing toggleTheme={toggleTheme} /> */}
       {/* <Checkout /> */}
-      <Signin />
+      {/* <Signin /> */}
+      <StickyFooter />
     </ThemeProvider>
   );
 }
