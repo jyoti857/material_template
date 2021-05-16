@@ -3,7 +3,8 @@ import { AppBar, Button, createStyles, makeStyles, Paper, Step, StepLabel, Stepp
 import * as React from 'react';
 import { Copyright } from '../utils';
 import PaymentForm from './PaymentForm';
-
+import AddressForm from './AddressForm';
+import Review from './Review';
 const useStyles = makeStyles((theme) => createStyles({
   appbar: {
     position: 'relative'
@@ -45,11 +46,11 @@ const steps = ['Shipping address', 'Payment details', 'Review your order'];
 const getStepContent = (step: number) => {
   switch(step){
     case 0: 
-      return <div>Address form</div>
+      return <AddressForm />
     case 1: 
       return <PaymentForm />
     case 2: 
-      return <div>Address form</div>
+      return <Review />
     default: 
       throw new Error("unknown step")
   }
