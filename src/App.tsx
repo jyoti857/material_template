@@ -5,6 +5,7 @@ import { darkTheme, lightTheme } from './appTheme';
 import Dashboard from './pages/getting-started/templates/dahboard/Dashboard'
 import Pricing from './pages/getting-started/templates/pricing/Pricing'
 import Checkout from './pages/getting-started/templates/checkout/Checkout'
+import Signup from './pages/getting-started/templates/signup/Signup'
 
 
 const  App: FC<any> = (props) => {
@@ -14,7 +15,8 @@ const  App: FC<any> = (props) => {
     <ThemeProvider theme = {theme}>
       {/* <Dashboard toggleTheme = {toggleTheme}/> */}
       {/* <Pricing toggleTheme={toggleTheme} /> */}
-      <Checkout />
+      {/* <Checkout /> */}
+      <Signup />
     </ThemeProvider>
   );
 }
