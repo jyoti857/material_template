@@ -3,7 +3,15 @@ import { Card, CardActionArea, CardContent, CardMedia, createStyles, Grid, Hidde
 import * as React from 'react';
 
 const useStyles=makeStyles((theme: Theme) => createStyles({
-  cardMedia: {}
+  card: {
+    display: 'flex',
+  },
+  cardDetails: {
+    flex: 1,
+  },
+  cardMedia: {
+    width: 160
+  },
 }))
 interface FeaturedPostProps {
   post: any
@@ -12,12 +20,12 @@ interface FeaturedPostProps {
 const FeaturedPost: React.FC<FeaturedPostProps> = ({post}) => {
   const classes=useStyles();
   return(
-    <Grid>
-      <CardActionArea>
-        <Card>
-          <div>
+    <Grid item xs={6} md={6}>
+      <CardActionArea component='a' href='#'>
+        <Card className={classes.card}>
+          <div className={classes.cardDetails}>
             <CardContent>
-              <Typography>
+              <Typography component="h2" variant="h5">
                 {post.title}
               </Typography>
               <Typography variant="subtitle1" color="textSecondary">

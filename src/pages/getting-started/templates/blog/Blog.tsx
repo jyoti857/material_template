@@ -29,7 +29,7 @@ const Blog: React.FC<BlogProps> = (props) => {
         <Header title="Blog" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid>
+          <Grid container spacing={4}>
             {featuredPosts.map((post) => {
               return (
                 <div key={post.title}>
@@ -38,7 +38,7 @@ const Blog: React.FC<BlogProps> = (props) => {
               )
             })}
           </Grid>
-          <Grid className={classes.mainGrid}></Grid>
+          <Grid container spacing={5} className={classes.mainGrid}></Grid>
         </main>
       </Container>
     </React.Fragment>
