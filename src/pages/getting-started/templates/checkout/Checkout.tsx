@@ -3,6 +3,7 @@ import { AppBar, Button, createStyles, makeStyles, Paper, Step, StepLabel, Stepp
 import * as React from 'react';
 import { Copyright } from '../utils';
 import AddressForm from './AddressForm';
+import Review from './Review';
 
 const useStyles = makeStyles((theme) => createStyles({
   appbar: {
@@ -49,7 +50,7 @@ const getStepContent = (step: number) => {
     case 1: 
       return <div>Address form</div>
     case 2: 
-      return <div>Address form</div>
+      return <Review />
     default: 
       throw new Error("unknown step")
   }
