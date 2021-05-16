@@ -2,6 +2,7 @@
 import { AppBar, Button, createStyles, makeStyles, Paper, Step, StepLabel, Stepper, Toolbar, Typography } from '@material-ui/core';
 import * as React from 'react';
 import { Copyright } from '../utils';
+import AddressForm from './AddressForm';
 
 const useStyles = makeStyles((theme) => createStyles({
   appbar: {
@@ -44,7 +45,7 @@ const steps = ['Shipping address', 'Payment details', 'Review your order'];
 const getStepContent = (step: number) => {
   switch(step){
     case 0: 
-      return <div>Address form</div>
+      return <AddressForm />
     case 1: 
       return <div>Address form</div>
     case 2: 
