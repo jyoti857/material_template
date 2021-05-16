@@ -1,10 +1,11 @@
 
-import { AppBar, Box, Button, Card, CardActions, CardContent, CardHeader, Container, createStyles, CssBaseline, Grid, Link, makeStyles, Theme, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Box, Button, Card, CardActions, CardContent, CardHeader, Container, createStyles, CssBaseline, Grid, IconButton, Link, makeStyles, Theme, Toolbar, Typography } from '@material-ui/core';
 import { ClassNameMap } from '@material-ui/styles';
 import * as React from 'react';
 import { Copyright } from '../utils';
 import { footers, tiers } from './pricingData';
 import StarIcon from '@material-ui/icons/StarBorder'
+import DarkMode from '@material-ui/icons/Brightness4'
 
 
 const useStyles = makeStyles((theme: Theme) => 
@@ -54,16 +55,17 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 interface PricingProps {
+  toggleTheme: () => boolean
 }
 
-const Pricing: React.FC<PricingProps> = (props) => {
+const Pricing: React.FC<PricingProps> = ({toggleTheme}: PricingProps) => {
   const {  heroContent, cardHeader, cardPricing, footer, ...classes }: ClassNameMap<"toolbar" | "@global" | "appbar" | "toolbarTitle" | 
     "link" | "heroContent" | "footer" | "cardHeader" | "cardPricing"> = useStyles();
   return (
     <React.Fragment>
       <CssBaseline />
       <AppBar className={classes.appbar} color='default' elevation={1}>
-        <Toolbar className={classes.toolbar}>
+        <Toolbar className={classes.toolbar} >
           <Typography variant='h6' color='inherit' className={classes.toolbarTitle}>
             Company name
           </Typography>
@@ -75,6 +77,11 @@ const Pricing: React.FC<PricingProps> = (props) => {
             <Link variant='button' color='textPrimary' href='#' className={classes.link}>Support</Link>
           </nav>
           <Button href="#" color="primary" variant="outlined" className={classes.link}>Login</Button>
+          <IconButton
+            onClick={toggleTheme}
+          >
+            <DarkMode />
+          </IconButton>
         </Toolbar>
       </AppBar>
       {/* hero unit */}

@@ -12,7 +12,7 @@ const  App: FC<any> = (props) => {
   return (
     <ThemeProvider theme = {theme}>
       {/* <Dashboard toggleTheme = {toggleTheme}/> */}
-      <Pricing />
+      <Pricing toggleTheme={toggleTheme} />
     </ThemeProvider>
   );
 }
