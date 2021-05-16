@@ -5,6 +5,7 @@ import * as React from 'react';
 const useStyles=makeStyles((theme: Theme) => createStyles({
   card: {
     display: 'flex',
+    // margin: theme.spacing(2)
   },
   cardDetails: {
     flex: 1,
@@ -20,7 +21,7 @@ interface FeaturedPostProps {
 const FeaturedPost: React.FC<FeaturedPostProps> = ({post}) => {
   const classes=useStyles();
   return(
-    <Grid item xs={6} md={6}>
+    <Grid item xs={12} md={6}>
       <CardActionArea component='a' href='#'>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>

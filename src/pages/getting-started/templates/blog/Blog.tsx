@@ -3,10 +3,11 @@
 import { Container, createStyles, CssBaseline, Grid, Theme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import * as React from 'react';
-import { featuredPosts, mainFeaturedPost, sections } from './blogData';
+import { featuredPosts, mainFeaturedPost, sections, sidebar } from './blogData';
 import Header from './Header';
 import FeaturedPost from './FeaturedPost';
 import MainFeaturedPost from './MainFeaturedPost';
+import Sidebar from './Sidebar';
 
 // import * as post1 from './blog-post.1.md';
 // import * as post2 from './blog-post.2.md';
@@ -32,13 +33,18 @@ const Blog: React.FC<BlogProps> = (props) => {
           <Grid container spacing={4}>
             {featuredPosts.map((post) => {
               return (
-                <div key={post.title}>
-                  <FeaturedPost post={post}/>
-                </div>
+                <FeaturedPost key={post.title} post={post}/>
               )
             })}
           </Grid>
-          <Grid container spacing={5} className={classes.mainGrid}></Grid>
+          <Grid container spacing={5} className={classes.mainGrid}>
+            <Sidebar 
+              title={sidebar.title}
+              description={sidebar.description}
+              archives={sidebar.archives}
+              social={sidebar.social}
+            />
+          </Grid>
         </main>
       </Container>
     </React.Fragment>
