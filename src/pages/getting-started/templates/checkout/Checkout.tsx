@@ -2,6 +2,7 @@
 import { AppBar, Button, createStyles, makeStyles, Paper, Step, StepLabel, Stepper, Toolbar, Typography } from '@material-ui/core';
 import * as React from 'react';
 import { Copyright } from '../utils';
+import PaymentForm from './PaymentForm';
 
 const useStyles = makeStyles((theme) => createStyles({
   appbar: {
@@ -46,7 +47,7 @@ const getStepContent = (step: number) => {
     case 0: 
       return <div>Address form</div>
     case 1: 
-      return <div>Address form</div>
+      return <PaymentForm />
     case 2: 
       return <div>Address form</div>
     default: 
