@@ -6,6 +6,7 @@ import Dashboard from './pages/getting-started/templates/dahboard/Dashboard'
 import Pricing from './pages/getting-started/templates/pricing/Pricing'
 import Checkout from './pages/getting-started/templates/checkout/Checkout'
 import Signup from './pages/getting-started/templates/signup/Signup'
+import Album from './pages/getting-started/templates/album/Album'
 
 
 const  App: FC<any> = (props) => {
@@ -16,7 +17,8 @@ const  App: FC<any> = (props) => {
       {/* <Dashboard toggleTheme = {toggleTheme}/> */}
       {/* <Pricing toggleTheme={toggleTheme} /> */}
       {/* <Checkout /> */}
-      <Signup />
+      {/* <Signup /> */}
+      <Album />
     </ThemeProvider>
   );
 }
