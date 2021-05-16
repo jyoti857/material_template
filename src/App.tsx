@@ -3,6 +3,7 @@ import { FC, useReducer } from 'react';
 import { darkTheme, lightTheme } from './appTheme';
 
 import Dashboard from './pages/getting-started/templates/dahboard/Dashboard'
+import Pricing from './pages/getting-started/templates/pricing/Pricing'
 
 
 const  App: FC<any> = (props) => {
@@ -10,7 +11,8 @@ const  App: FC<any> = (props) => {
   let theme: Theme = createMuiTheme(!useDefaultTheme ? darkTheme : lightTheme);
   return (
     <ThemeProvider theme = {theme}>
-      <Dashboard toggleTheme = {toggleTheme}/>
+      {/* <Dashboard toggleTheme = {toggleTheme}/> */}
+      <Pricing />
     </ThemeProvider>
   );
 }
