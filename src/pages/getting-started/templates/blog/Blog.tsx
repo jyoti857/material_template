@@ -6,6 +6,7 @@ import * as React from 'react';
 import { featuredPosts, mainFeaturedPost, sections } from './blogData';
 import Header from './Header';
 import FeaturedPost from './FeaturedPost';
+import MainFeaturedPost from './MainFeaturedPost';
 
 // import * as post1 from './blog-post.1.md';
 // import * as post2 from './blog-post.2.md';
@@ -27,7 +28,7 @@ const Blog: React.FC<BlogProps> = (props) => {
       <Container maxWidth='lg'>
         <Header title="Blog" sections={sections} />
         <main>
-          {/* <MainFeaturedPost post={mainFeaturedPost} /> */}
+          <MainFeaturedPost post={mainFeaturedPost} />
           <Grid>
             {featuredPosts.map((post) => {
               return (
