@@ -1,4 +1,13 @@
-export const tiers = [
+export interface TierProps{
+  title: string;
+  price: string;
+  description: string[];
+  buttonText: string;
+  buttonVariant: 'outlined' | 'contained' | 'text';
+  subheader?: any;
+}
+
+export const tiers: TierProps[] = [
   {
     title: 'Free',
     price: '0',

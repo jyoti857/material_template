@@ -92,7 +92,7 @@ const Pricing: React.FC<PricingProps> = (props) => {
             tiers.map((tier) => {
               return(
                 <Grid key={tier.title} item xs={12}
-                  sm={tier==='Enterprise' ? 12 : 6}
+                  sm={tier.title==='Enterprise' ? 12 : 6}
                   md={4}
                 >
                   <Card>
