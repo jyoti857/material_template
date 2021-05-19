@@ -1,4 +1,3 @@
-
 import { AppBar, Box, Button, Card, CardActions, CardContent, CardHeader, Container, createStyles, CssBaseline, Grid, IconButton, Link, makeStyles, Theme, Toolbar, Typography } from '@material-ui/core';
 import { ClassNameMap } from '@material-ui/styles';
 import * as React from 'react';
@@ -55,10 +54,10 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 interface PricingProps {
-  toggleTheme: () => boolean
+  toggleTheme: React.DispatchWithoutAction
 }
 
-const Pricing: React.FC<PricingProps> = ({toggleTheme}: PricingProps) => {
+const Pricing: React.FC<PricingProps> = ({toggleTheme}) => {
   const {  heroContent, cardHeader, cardPricing, footer, ...classes }: ClassNameMap<"toolbar" | "@global" | "appbar" | "toolbarTitle" | 
     "link" | "heroContent" | "footer" | "cardHeader" | "cardPricing"> = useStyles();
   return (
@@ -76,7 +75,9 @@ const Pricing: React.FC<PricingProps> = ({toggleTheme}: PricingProps) => {
             <Link variant='button' color='textPrimary' href='#' className={classes.link}>Enterprise</Link>
             <Link variant='button' color='textPrimary' href='#' className={classes.link}>Support</Link>
           </nav>
-          <Button href="#" color="primary" variant="outlined" className={classes.link}>Login</Button>
+          <Button href="/signin" color="primary" variant="outlined" className={classes.link}>
+            Login
+          </Button>
           <IconButton
             onClick={toggleTheme}
           >
