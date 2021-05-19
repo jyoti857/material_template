@@ -12,12 +12,36 @@ import Signup from './pages/getting-started/templates/signup/Signup'
 import Album from './pages/getting-started/templates/album/Album'
 import Templates from './pages/getting-started/templates'
 
+import { Router as BrowserRouter, Route, Switch} from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 const  App: FC<any> = (props) => {
   const [useDefaultTheme, toggleTheme] = useReducer((theme) => !theme, true)
   let theme: Theme = createMuiTheme(!useDefaultTheme ? darkTheme : lightTheme);
+  const history = createBrowserHistory();
+  const routesAll: any = () => {
+    return (
+      <BrowserRouter history={history}>
+        <Route exact path='/'>
+          <Dashboard toggleTheme={toggleTheme}/>
+        </Route>
+        <Switch>
+          <Route exact path='/signin'>
+            <Signin />
+          </Route>
+          <Route exact path='/signup'>
+            <Signup />
+          </Route>
+          <Route exact path='/pricing'>
+            <Pricing toggleTheme={toggleTheme} />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    )
+  }
   return (
     <ThemeProvider theme = {theme}>
+      {routesAll()}
       {/* <Dashboard toggleTheme = {toggleTheme}/> */}
       {/* <Pricing toggleTheme={toggleTheme} /> */}
       {/* <Checkout /> */}
@@ -25,8 +49,8 @@ const  App: FC<any> = (props) => {
       {/* <StickyFooter /> */}
       {/* <Blog /> */}
       {/* <Signup /> */}
-      <Templates />
       {/* <Album /> */}
+      <Templates /> 
     </ThemeProvider>
   );
 }
