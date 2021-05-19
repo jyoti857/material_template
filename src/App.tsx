@@ -1,4 +1,4 @@
-import { createMuiTheme, ThemeProvider, Theme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createMuiTheme, ThemeProvider, Theme } from '@material-ui/core/styles';
 import { FC, useReducer } from 'react';
 import { darkTheme, lightTheme } from './appTheme';
 
@@ -23,17 +23,32 @@ const  App: FC<any> = (props) => {
     return (
       <BrowserRouter history={history}>
         <Route exact path='/'>
-          <Dashboard toggleTheme={toggleTheme}/>
+          <Templates />
         </Route>
         <Switch>
-          <Route exact path='/signin'>
+        <Route exact path='/getting-started/templates/dashboard/'>
+          <Dashboard toggleTheme={toggleTheme}/>
+        </Route>
+          <Route exact path='/getting-started/templates/signin'>
             <Signin />
           </Route>
-          <Route exact path='/signup'>
+          <Route exact path='/getting-started/templates/signup'>
             <Signup />
           </Route>
-          <Route exact path='/pricing'>
+          <Route exact path='/getting-started/templates/pricing/'>
             <Pricing toggleTheme={toggleTheme} />
+          </Route>
+          <Route exact path='/getting-started/templates/blog/'>
+            <Blog  />
+          </Route>
+          <Route exact path='/getting-started/templates/album/'>
+            <Album  />
+          </Route>
+          <Route exact path='/getting-started/templates/checkout/'>
+            <Checkout  />
+          </Route>
+          <Route exact path='/getting-started/templates/sticky-footer/'>
+            <StickyFooter  />
           </Route>
         </Switch>
       </BrowserRouter>
@@ -42,19 +57,8 @@ const  App: FC<any> = (props) => {
   return (
     <ThemeProvider theme = {theme}>
       {routesAll()}
-      {/* <Dashboard toggleTheme = {toggleTheme}/> */}
-      {/* <Pricing toggleTheme={toggleTheme} /> */}
-      {/* <Checkout /> */}
-      {/* <Signin /> */}
-      {/* <StickyFooter /> */}
-      {/* <Blog /> */}
-      {/* <Signup /> */}
-      {/* <Album /> */}
-      <Templates /> 
     </ThemeProvider>
   );
 }
-
-
 
 export default App;

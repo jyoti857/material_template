@@ -80,7 +80,7 @@ const Signin: React.FC<SigninProps> = (props) => {
               <Link href='#' variant='body2'>Forgot password?</Link>
             </Grid>
             <Grid item>
-              <Link href='#' variant='body2'>{"Don't have account? Sign Up"}</Link>
+              <Link href='/getting-started/templates/signup' variant='body2'>{"Don't have account? Sign Up"}</Link>
             </Grid>
           </Grid>
         </form>

@@ -1,5 +1,5 @@
 
-import { Button, Card, CardActions, CardContent, CardMedia, createStyles, Grid, Theme, Typography } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, CardMedia, createStyles, Grid, Theme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import * as React from 'react';
 import { templatesData } from './templatesData'
@@ -13,9 +13,23 @@ const useStyles = makeStyles((theme: Theme) =>  createStyles({
     justifyContent: 'center',
     margin: 'auto'
   }, 
+  item: {
+    flexGrow: 1,
+  },
   card: {
-    margin: theme.spacing(2)
-  }
+    // margin: theme.spacing(2),
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  cardMedia: {
+    height: 0,
+    paddingTop: '65%',
+  },
 }))
 interface TemplatesProps {
 }
@@ -26,7 +40,8 @@ const Templates: React.FC<TemplatesProps> = (props) => {
       {
         templatesData.map((td => {
           return(
-            <Grid sm={6} xs={12} md={6} lg={4} justify='center'>
+            <Grid key = {td.title} className={classes.item}
+              item sm={6} xs={12} md={6} lg={4} justify='center'>
               <Card className={classes.card}>
                 <CardMedia 
                   component='a'
@@ -36,11 +51,9 @@ const Templates: React.FC<TemplatesProps> = (props) => {
                   rel="nofollow"
                   target="_blank"
                 />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" align="left" component="h2">
-                    {td.title}
-                  </Typography>
-                  <Typography component="p">{td.description}</Typography>
+                <CardContent className={classes.cardContent}>
+                  <CardMedia image='https://source.unsplash.com/random' 
+                    className={classes.cardMedia}/>
                 </CardContent>
                 <CardActions>
                   <Button component='a' href={td.href} variant='contained' size='small' color='secondary'>

@@ -75,7 +75,7 @@ const Pricing: React.FC<PricingProps> = ({toggleTheme}) => {
             <Link variant='button' color='textPrimary' href='#' className={classes.link}>Enterprise</Link>
             <Link variant='button' color='textPrimary' href='#' className={classes.link}>Support</Link>
           </nav>
-          <Button href="/signin" color="primary" variant="outlined" className={classes.link}>
+          <Button href="/getting-started/templates/signin" color="primary" variant="outlined" className={classes.link}>
             Login
           </Button>
           <IconButton

@@ -1,6 +1,6 @@
 export const templatesData = [
   {
-    title: "dashboardTitle",
+    title: "dashboard",
     description: "dashboardDescr",
     src: '/static/images/templates/dashboard.png',
     href: '/getting-started/templates/dashboard/',
@@ -8,31 +8,31 @@ export const templatesData = [
       'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/dashboard',
   },
   {
-    title: "signInTitle",
+    title: "signIn",
     description: "signInDescr",
     src: '/static/images/templates/sign-in.png',
-    href: '/getting-started/templates/sign-in/',
+    href: '/getting-started/templates/signin/',
     source:
       'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/sign-in',
   },
+  // {
+  //   title: "signInSide",
+  //   description: "signInSideDescr",
+  //   src: '/static/images/templates/sign-in-side.png',
+  //   href: '/getting-started/templates/sign-in-side/',
+  //   source:
+  //     'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/sign-in-side',
+  // },
   {
-    title: "signInSideTitle",
-    description: "signInSideDescr",
-    src: '/static/images/templates/sign-in-side.png',
-    href: '/getting-started/templates/sign-in-side/',
-    source:
-      'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/sign-in-side',
-  },
-  {
-    title: "signUpTitle",
+    title: "signUp",
     description: "signUpDescr",
     src: '/static/images/templates/sign-up.png',
-    href: '/getting-started/templates/sign-up/',
+    href: '/getting-started/templates/signup/',
     source:
       'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/sign-up',
   },
   {
-    title: "blogTitle",
+    title: "blog",
     description: "blogDescr",
     src: '/static/images/templates/blog.png',
     href: '/getting-started/templates/blog/',
@@ -40,7 +40,7 @@ export const templatesData = [
       'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/blog',
   },
   {
-    title: "checkoutTitle",
+    title: "checkout",
     description: "checkoutDescr",
     src: '/static/images/templates/checkout.png',
     href: '/getting-started/templates/checkout/',
@@ -48,7 +48,7 @@ export const templatesData = [
       'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/checkout',
   },
   {
-    title: "albumTitle",
+    title: "album",
     description: "albumDescr",
     src: '/static/images/templates/album.png',
     href: '/getting-started/templates/album/',
@@ -56,7 +56,7 @@ export const templatesData = [
       'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/album',
   },
   {
-    title: "pricingTitle",
+    title: "pricing",
     description: "pricingDescr",
     src: '/static/images/templates/pricing.png',
     href: '/getting-started/templates/pricing/',
@@ -64,7 +64,7 @@ export const templatesData = [
       'https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/pricing',
   },
   {
-    title: "stickyFooterTitle",
+    title: "stickyFooter",
     description: "stickyFooterDescr",
     src: '/static/images/templates/sticky-footer.png',
     href: '/getting-started/templates/sticky-footer/',
